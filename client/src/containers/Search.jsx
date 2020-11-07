@@ -74,7 +74,7 @@ const Search = () => {
             }
             image={
               book.volumeInfo.imageLinks
-                ? book.volumeInfo.imageLinks.smallThumbnail
+                ? book.volumeInfo.imageLinks.thumbnail
                 : "https://image.flaticon.com/icons/png/512/130/130304.png"
             }
             googleLink={book.volumeInfo.infoLink}
