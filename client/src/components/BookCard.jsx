@@ -6,10 +6,10 @@ const BookCard = ({ title, authors, image, description }) => {
       <div className="row">
         <div className="col-12">
           <h3 className="float-left">{title}</h3>
-          <button type="button" class="btn btn-success float-right">
+          <button type="button" className="btn btn-success float-right">
             Save
           </button>
-          <button type="button" class="btn btn-primary float-right">
+          <button type="button" className="btn btn-primary float-right">
             View
           </button>
         </div>
@@ -21,7 +21,7 @@ const BookCard = ({ title, authors, image, description }) => {
       </div>
       <div className="row">
         <div className="col-2">
-          <img src="http://www.fillmurray.com/200/200" alt={title} />
+          <img src={image} alt={title} />
         </div>
         <div className="col-10">
           <p>{description}</p>

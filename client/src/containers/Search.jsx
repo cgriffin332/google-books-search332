@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import BookCard from "../components/BookCard";
 
 const Search = () => {
-  const [ search, setSearch ] = useState("");
-  const [ results, setResults ] = useState([]);
+  const [search, setSearch] = useState("");
+  const [results, setResults] = useState([]);
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -62,10 +62,14 @@ const Search = () => {
         </form>
       </div>
       <div className="col-3"></div>
-      {results.map(book =>{
-          <BookCard title={book.volumeInfo.title} authors={book.volumeInfo.authors}  description={book.volumeInfo.description} />
-      })}
-      
+      {results.map((book) => (
+        <BookCard
+          title={book.volumeInfo.title}
+          authors={book.volumeInfo.authors}
+          description={book.volumeInfo.description}
+          image={book.volumeInfo.imageLinks.smallThumbnail}
+        />
+      ))}
     </div>
   );
 };
