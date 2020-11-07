@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import API from "./utils/API";
 import "./App.css";
 import Jumbotron from "./components/Jumbotron";
+import Navbar from "./components/Navbar";
 
 function App() {
-
   // useEffect(() => {
   //   API.getBooks("holes")
   //     .then((response) => {
@@ -26,7 +26,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Jumbotron/>
+        <Navbar />
+        <Jumbotron />
         <Switch>
           <Route exact path="/saved" component={Saved} />
           <Route exact path="/" component={Search} />
