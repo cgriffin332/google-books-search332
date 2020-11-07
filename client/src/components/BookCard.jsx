@@ -16,7 +16,7 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
     });
   };
   return (
-    <div className="container">
+    <div className="container border">
       <div className="row">
         <div className="col-12">
           <h3 className="float-left">{title}</h3>
@@ -37,7 +37,7 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
       </div>
       <div className="row">
         <div className="col-2">
-          <img src={image} alt={title} />
+          <img style={{"max-width": "100%"}}src={image} alt={title} />
         </div>
         <div className="col-10">
           <p>{description}</p>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { useEffect } from "react";
 // import API from "./utils/API";
 import "./App.css";
+import Jumbotron from "./components/Jumbotron";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Jumbotron/>
         <Switch>
           <Route exact path="/saved" component={Saved} />
           <Route exact path="/" component={Search} />
