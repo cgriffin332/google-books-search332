@@ -9,16 +9,21 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-  }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleBooksDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+app.use(express.static("client/build"));
+
+const booksController = require("./controllers/booksController");
+app.use(booksController);
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/googleBooksDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
 const connection = mongoose.connection;
 
@@ -38,13 +43,11 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-const booksController = require("./controllers/booksController");
-app.use(booksController);
+
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  });
-
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`App is running on http://localhost:${PORT}`);
