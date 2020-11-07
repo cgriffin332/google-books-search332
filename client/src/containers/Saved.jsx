@@ -26,8 +26,11 @@ const Saved = () => {
             title={book.title}
             authors={book.authors}
             description={book.description}
-            image={book.imageLinks}
-            googleLink={book.infoLink}
+            image={book.image}
+            googleLink={book.googleLink}
+            key={book._id}
+            id={book._id}
+            loadBooks={loadBooks}
           />
         ))
       ) : (

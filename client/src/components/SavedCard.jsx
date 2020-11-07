@@ -1,12 +1,14 @@
 import React from "react";
 import axios from "axios";
 
-const SavedCard = ({ title, authors, image, description, googleLink }) => {
+const SavedCard = ({ title, authors, image, description, googleLink, id, loadBooks }) => {
   
 
   const handleDelete = (e) => {
+      console.log(e.target)
     axios.delete(`api/books/${e.target.id}`).then((res) => {
       console.log(res);
+      loadBooks();
     }).catch((err) => console.log(err));
   };
   return (
@@ -14,7 +16,7 @@ const SavedCard = ({ title, authors, image, description, googleLink }) => {
       <div className="row">
         <div className="col-12">
           <h3 className="float-left">{title}</h3>
-          <button type="button" onClick={handleDelete} className="btn btn-success float-right">
+          <button type="button" id={id} onClick={handleDelete} className="btn btn-success float-right">
             Delete
           </button>
           <a href={googleLink} target="_blank" rel="noreferrer">
