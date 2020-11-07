@@ -1,8 +1,8 @@
 import Saved from "./containers/Saved";
 import Search from "./containers/Search";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { useEffect } from "react";
-import API from "./utils/API";
+// import { useEffect } from "react";
+// import API from "./utils/API";
 import "./App.css";
 
 function App() {

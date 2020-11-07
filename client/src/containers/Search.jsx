@@ -62,14 +62,14 @@ const Search = () => {
         </form>
       </div>
       <div className="col-3"></div>
-      {results.map((book) => (
+      {results.map((book, index) => (
         <BookCard
           title={book.volumeInfo.title}
           authors={book.volumeInfo.authors}
           description={book.volumeInfo.description}
           image={book.volumeInfo.imageLinks.smallThumbnail}
           googleLink={book.volumeInfo.infoLink}
-          key={book.selfLink}
+          key={index}
         />
       ))}
     </div>

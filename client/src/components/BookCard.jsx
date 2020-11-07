@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const BookCard = ({ title, authors, image, description, googleLink, key }) => {
+const BookCard = ({ title, authors, image, description, googleLink }) => {
   const [newBook, setNewBook] = useState({
     title: title,
     authors: authors,
     image: image,
     description: description,
     googleLink: googleLink,
-    key: key,
   });
 
   const handleSave = (e) => {
