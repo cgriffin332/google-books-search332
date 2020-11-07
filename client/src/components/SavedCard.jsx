@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 
-const BookCard = ({ title, authors, image, description, googleLink }) => {
-  const [newBook, setNewBook] = useState({
-    title: title,
-    authors: authors,
-    image: image,
-    description: description,
-    googleLink: googleLink,
-  });
+const SavedCard = ({ title, authors, image, description, googleLink }) => {
+  
 
-  const handleSave = (e) => {
-    axios.post("api/books", newBook).then((res) => {
+  const handleDelete = (e) => {
+    axios.delete(`api/books/${e.target.id}`).then((res) => {
       console.log(res);
     }).catch((err) => console.log(err));
   };
@@ -20,8 +14,8 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
       <div className="row">
         <div className="col-12">
           <h3 className="float-left">{title}</h3>
-          <button type="button" onClick={handleSave} className="btn btn-success float-right">
-            Save
+          <button type="button" onClick={handleDelete} className="btn btn-success float-right">
+            Delete
           </button>
           <a href={googleLink} target="_blank" rel="noreferrer">
             <button type="button" className="btn btn-primary float-right">
@@ -47,4 +41,4 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
   );
 };
 
-export default BookCard;
+export default SavedCard;

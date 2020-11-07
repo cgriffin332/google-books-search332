@@ -10,8 +10,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("client/build"));
-
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
+  
 const booksController = require("./controllers/booksController");
 app.use(booksController);
 

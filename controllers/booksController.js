@@ -19,7 +19,6 @@ router.post("/api/books", (req, res) => {
     image: req.body.image,
     description: req.body.description,
     googleLink: req.body.googleLink,
-    key: req.body.key,
   };
   db.Books.create(newBook).then((newBook) => {
     res.json(newBook);
