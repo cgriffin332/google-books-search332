@@ -1,11 +1,24 @@
-import React from 'react';
+import React from "react";
 
 const Search = () => {
-    return (
-        <div>
-            <h1>Search Page</h1>
+  return (
+    <form>
+      <div class="form-group row">
+        <label for="inputSearch" class="col-sm-2 col-form-label">
+          Search:
+        </label>
+        <div class="col-sm-10">
+          <input
+            type="search"
+            name="search"
+            class="form-control"
+            id="inputSearch"
+            placeholder="Search"
+          />
         </div>
-    );
+      </div>
+    </form>
+  );
 };
 
 export default Search;
