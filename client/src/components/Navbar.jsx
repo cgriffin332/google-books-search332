@@ -17,14 +17,18 @@ const Navbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <Link className="nav-item nav-link active" to="/">
-            Search
-          </Link>
-          <Link className="nav-item nav-link active" to="/saved">
-            Saved
-          </Link>
-        </div>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item ml-auto">
+            <Link className="nav-link" to="/">
+              Search
+            </Link>
+          </li>
+          <li className="nav-item ml-auto">
+            <Link className="nav-link" to="/saved">
+              Saved
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
