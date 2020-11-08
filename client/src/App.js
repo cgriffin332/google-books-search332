@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   // useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/saved" component={Saved} />
           <Route exact path="/" component={Search} />
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );

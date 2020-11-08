@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const BookCard = ({ title, authors, image, description, googleLink }) => {
-  const [newBook, setNewBook] = useState({
+  const [newBook] = useState({
     title: title,
     authors: authors,
     image: image,
@@ -14,7 +14,6 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
   const handleSave = (e) => {
     axios.post("api/books", newBook).then((res) => {
       console.log(res);
-      window.open("/saved");
     }).catch((err) => console.log(err));
   };
   return (
