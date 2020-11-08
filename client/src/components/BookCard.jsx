@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Modal from "./Modal";
 
 const BookCard = ({ title, authors, image, description, googleLink }) => {
   const [newBook, setNewBook] = useState({
@@ -20,7 +21,7 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
       <div className="row">
         <div className="col-12">
           <h3 className="float-left">{title}</h3>
-          <button type="button" onClick={handleSave} className="btn btn-success float-right">
+          <button type="button" onClick={handleSave} data-target="#exampleModal" className="btn btn-success float-right">
             Save
           </button>
           <a href={googleLink} target="_blank" rel="noreferrer">
@@ -43,6 +44,7 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
           <p>{description}</p>
         </div>
       </div>
+      <Modal title={"Success!"} message={"This book has been added to your saved book list."}/>
     </div>
   );
 };

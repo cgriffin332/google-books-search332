@@ -16,7 +16,7 @@ const SavedCard = ({ title, authors, image, description, googleLink, id, loadBoo
       <div className="row">
         <div className="col-12">
           <h3 className="float-left">{title}</h3>
-          <button type="button" id={id} onClick={handleDelete} className="btn btn-success float-right">
+          <button type="button" id={id} onClick={handleDelete} className="btn btn-danger float-right">
             Delete
           </button>
           <a href={googleLink} target="_blank" rel="noreferrer">
