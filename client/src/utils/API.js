@@ -7,8 +7,5 @@ export default {
       method: "GET",
       url: `https://www.googleapis.com/books/v1/volumes?q=intitle:${search}&printType=books&key=${config}`,
     });
-  },
-  getAllBooks: function () {
-    return axios.get("/api/books");
-  },
+  }
 };
