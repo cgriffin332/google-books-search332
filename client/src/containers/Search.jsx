@@ -24,6 +24,7 @@ const Search = () => {
         console.log(err);
       });
   };
+
   return (
     <div className="row">
       <div className="col-3"></div>

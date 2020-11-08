@@ -14,6 +14,7 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
   const handleSave = (e) => {
     axios.post("api/books", newBook).then((res) => {
       console.log(res);
+      window.location.reload(false);
     }).catch((err) => console.log(err));
   };
   return (
