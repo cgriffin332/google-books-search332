@@ -18,15 +18,7 @@ const Search = () => {
     API.getBooks(search)
       .then((response) => {
         setResults(response.data.items);
-        console.log(search);
-        console.log(results);
-        // console.log(response.data.items[0].volumeInfo.title);
-        // console.log(response.data.items[0].volumeInfo.authors);
-        // console.log(
-        //   response.data.items[0].volumeInfo.imageLinks.smallThumbnail
-        // );
-        // console.log(response.data.items[0].volumeInfo.description);
-        // console.log(response.data.items[0].selfLink);
+        
       })
       .catch((err) => {
         console.log(err);
