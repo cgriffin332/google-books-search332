@@ -20,7 +20,22 @@ click this link:https://google-book-search332.herokuapp.com/
 
 ## Usage
 
-When the user opens the application, they are taken to the search page. The user can then search for the title of their choosing, press "Search" and a list of matches will populate below. The user can view more info about this book by clicking the "View" button. They can click the Save" button to save that book to the database, and the page is reloaded. The user can navigate to their saved books by clicking "Saved" in the navbar.  If the user wishes to remove a book from their saved list, they can press the "Delete" button. Happy reading!
+When the user opens the application, they are taken to the search page. 
+![Image of Start](./images/books1.png)
+
+The user can then search for the title of their choosing, press "Search" and a list of matches will populate below. 
+![Image of Search](./images/books2.png)
+
+The user can view more info about this book by clicking the "View" button. 
+![Image of Wiew](./images/books3.png)
+
+They can click the Save" button to save that book to the database, and the page is reloaded. The user can navigate to their saved books by clicking "Saved" in the navbar.  
+![Image of Saved](./images/books4.png)
+
+If the user wishes to remove a book from their saved list, they can press the "Delete" button. 
+![Image of Delete](./images/books5.png)
+
+Happy reading!
 
 ## License
 
